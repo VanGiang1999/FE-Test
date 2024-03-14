@@ -1,0 +1,213 @@
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+header {
+  background-color: #fff2f3;
+}
+header .wgt-header-box {
+  width: 1050px;
+  margin: 0px auto;
+  padding: 19px 0px;
+  display: grid;
+  grid-template-columns: 22% 30% 25% 23%;
+  align-items: center;
+}
+
+header .wgt-header-box .wgt-header-logo {
+  color: #252b42;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 32px;
+}
+
+.wgt-header-box .wgt-header-menu .wgt-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wgt-header-box .wgt-header-menu .wgt-navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.wgt-header-box .wgt-header-menu .wgt-navbar .wgt-navbar-login-mobile,
+.wgt-header-box .wgt-header-join-us.wgt-header-join-us-mobile {
+  display: none;
+}
+.wgt-header-box .wgt-header-menu .wgt-navbar ul li {
+  margin-right: 20px;
+}
+.wgt-header-box .wgt-header-menu .wgt-navbar ul li a {
+  color: #737373;
+  display: block;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.wgt-header-box .wgt-header-menu .wgt-navbar ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.wgt-header-box .wgt-header-menu .wgt-nav-toggler {
+  border: 3px solid #737373;
+  padding: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  height: 35px;
+  display: none;
+  border-radius: 5px;
+}
+.wgt-header-box .wgt-header-menu .wgt-nav-toggler span,
+.wgt-header-box .wgt-header-menu .wgt-nav-toggler span:before,
+.wgt-header-box .wgt-header-menu .wgt-nav-toggler span:after {
+  width: 25px;
+  height: 3px;
+  background-color: #737373;
+  display: block;
+  transition: 0.3s;
+}
+.wgt-header-box .wgt-header-menu .wgt-nav-toggler span:before {
+  content: "";
+  transform: translateY(-9px);
+}
+.wgt-header-box .wgt-header-menu .wgt-nav-toggler span:after {
+  content: "";
+  transform: translateY(6px);
+}
+.wgt-header-box .wgt-header-menu .wgt-nav-toggler.toggler-open span {
+  background-color: transparent;
+}
+.wgt-header-box .wgt-header-menu .wgt-nav-toggler.toggler-open span:before {
+  transform: translateY(0px) rotate(45deg);
+}
+.wgt-header-box .wgt-header-menu .wgt-nav-toggler.toggler-open span:after {
+  transform: translateY(-3px) rotate(-45deg);
+}
+
+/* mobile breakpoint start */
+@media screen and (max-width: 767px) {
+  /* navbar css for mobile start */
+  .wgt-header-box .wgt-header-menu .wgt-nav-toggler,
+  .wgt-header-box .wgt-header-menu .wgt-navbar .wgt-navbar-login-mobile {
+    display: block;
+  }
+  .wgt-header-box .wgt-header-join-us.wgt-header-join-us-mobile {
+    display: flex;
+  }
+  .wgt-header-box .wgt-header-menu .wgt-navbar {
+    min-height: 60px;
+  }
+  .wgt-header-box .wgt-header-menu .wgt-navbar ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 60px);
+    left: 0;
+    top: 98px;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255 242 243);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+    border-top: 2px solid #e5e7eb;
+  }
+  .wgt-header-box .wgt-header-menu .wgt-navbar ul li {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .wgt-header-box
+    .wgt-header-menu
+    .wgt-navbar
+    ul
+    .wgt-header-join-us-mobile-box {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wgt-header-box
+    .wgt-header-menu
+    .wgt-navbar
+    ul
+    .wgt-header-join-us-mobile-box
+    a {
+    color: #ffffff;
+  }
+  .wgt-header-box .wgt-header-menu .wgt-navbar ul li a {
+    padding: 15px;
+  }
+  .wgt-header-box .wgt-header-menu .wgt-navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .wgt-header-box .wgt-header-menu .wgt-navbar ul.open {
+    max-height: 38vh;
+    overflow: visible;
+  }
+  /* navbar css for mobile end */
+}
+/* mobile breakpoint end */
+
+.wgt-header-box .wgt-header-login {
+  text-align: end;
+  margin-right: 25px;
+}
+.wgt-header-box .wgt-header-login a {
+  text-decoration: none;
+  color: #96bb7c;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.wgt-header-box .wgt-header-join-us {
+  display: flex;
+  width: 139px;
+  height: 52px;
+  background-color: #96bb7c;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+.wgt-header-box .wgt-header-join-us a,
+.wgt-header-box .wgt-header-join-us.wgt-header-join-us-mobile a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-right: 13px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+.wgt-header-box .wgt-header-join-us.wgt-header-join-us-mobile a {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    padding: 0px 14px;
+  }
+  header .wgt-header-box {
+    width: 100%;
+    margin: 0px auto;
+    padding: 19px 0px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+  }
+  .wgt-header-box .wgt-header-login,
+  .wgt-header-box .wgt-header-join-us {
+    display: none;
+  }
+  .wgt-header-menu {
+    margin: auto;
+    margin-right: 0;
+  }
+}
